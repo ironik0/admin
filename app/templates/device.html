@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ device.name }}</h2>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><b>IP-адрес:</b> {{ device.ip_address }}</li>
+    <li class="list-group-item"><b>Тип:</b> {{ device.device_type }}</li>
+    <li class="list-group-item"><b>Описание:</b> {{ device.description }}</li>
+    <li class="list-group-item"><b>Статус:</b> 
+        {% if status %}
+            <span class="badge bg-success">Онлайн</span>
+        {% else %}
+            <span class="badge bg-danger">Оффлайн</span>
+        {% endif %}
+    </li>
+</ul>
+<a href="/" class="btn btn-secondary">Назад</a>
+{% endblock %}

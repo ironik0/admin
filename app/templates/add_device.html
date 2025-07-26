@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Добавить устройство</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="name" class="form-label">Имя устройства</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="ip_address" class="form-label">IP-адрес</label>
+        <input type="text" class="form-control" id="ip_address" name="ip_address" required>
+    </div>
+    <div class="mb-3">
+        <label for="device_type" class="form-label">Тип устройства</label>
+        <input type="text" class="form-control" id="device_type" name="device_type" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Описание</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+    <a href="/" class="btn btn-secondary">Отмена</a>
+</form>
+{% endblock %}
